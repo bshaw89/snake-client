@@ -22,6 +22,15 @@ const handleUserInput = function() {
     if (key === '\u0064') {
       connection.write("Move: right");
     };
+    if (key === '\u0066') {
+      connection.write("Say: SNAAAAAKE!!!");
+    };
+    if (key === '\u0065') {
+      connection.write("Say: My leg!");
+    };
+    if (key === '\u0072') {
+      connection.write("Say: 50 pts to Slytherin!");
+    };
   });
 };
 
