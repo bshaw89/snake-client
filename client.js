@@ -11,9 +11,19 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   // receive server data
+  conn.on('connect', () => {
+    console.log('Successfully connected to the game server');
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: BEN');
+  });
+
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
+
+
   return conn;
 }
 
